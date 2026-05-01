@@ -4,132 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andie & Mitch's Baby Shower</title>
-  <meta name="description" content="Andie & Mitch's garden-inspired baby shower RSVP website." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="floating-flower flower-one">✿</div>
-  <div class="floating-flower flower-two">✽</div>
-  <div class="floating-flower flower-three">❋</div>
 
   <header class="hero">
-    <nav class="nav">
-      <a href="#details">Details</a>
-      <a href="#rsvp">RSVP</a>
-      <a href="#registry">Registry</a>
-    </nav>
-
-    <div class="hero-card fade-in">
+    <div class="hero-overlay">
       <p class="eyebrow">Where the Wild Things Grow</p>
       <h1>Andie & Mitch's Baby Shower</h1>
-      <p class="hero-copy">Join us for a garden-inspired afternoon of BBQ, sunshine, wildflowers, and celebrating the little one on the way.</p>
-      <div class="event-pills">
-        <span>Saturday, August 22, 2026</span>
-        <span>Time TBD</span>
-        <span>Baby Shower BBQ</span>
-      </div>
-      <div class="hero-buttons">
-        <a class="button primary" href="#rsvp">RSVP</a>
-        <a class="button secondary" href="#details">View Details</a>
-      </div>
+      <p class="hero-date">Saturday, August 22, 2026</p>
+      <p class="hero-text">A sweet garden BBQ to celebrate the little one on the way.</p>
+      <a href="#rsvp" class="button">RSVP</a>
     </div>
   </header>
 
   <main>
-    <section class="section intro fade-in">
-      <p class="section-kicker">A little garden party</p>
-      <h2>Food, flowers, family, and friends.</h2>
-      <p>We are keeping things relaxed and casual with a backyard BBQ feel. Think wildflowers, picnic-style bites, something sweet, and time together before baby arrives.</p>
+    <section class="intro reveal">
+      <h2>Come celebrate with us</h2>
+      <p>
+        Join us for a relaxed afternoon filled with good food, wildflowers, sunshine,
+        and celebrating baby. More details are coming soon.
+      </p>
     </section>
 
-    <section id="details" class="section details-grid fade-in">
+    <section class="details reveal">
       <div class="detail-card">
-        <h3>Date & Time</h3>
-        <p>Saturday, August 22, 2026<br>Time TBD</p>
+        <h3>Date</h3>
+        <p>Saturday, August 22, 2026</p>
       </div>
+
+      <div class="detail-card">
+        <h3>Time</h3>
+        <p>TBD</p>
+      </div>
+
       <div class="detail-card">
         <h3>Location</h3>
-        <p>Add the location name or address here.<br>Add parking notes if needed.</p>
+        <p>TBD</p>
       </div>
+
       <div class="detail-card">
-        <h3>What to Expect</h3>
-        <p>Backyard BBQ, casual clothes, food, drinks, dessert, and a few sweet baby shower moments.</p>
+        <h3>Theme</h3>
+        <p>Garden BBQ, wildflowers, and locally grown sweetness.</p>
       </div>
     </section>
 
-    <section class="section countdown-section fade-in">
-      <p class="section-kicker">Countdown</p>
-      <h2>Shower day is coming soon.</h2>
-      <div class="countdown" data-event-date="2026-08-22T12:00:00">
-        <div><strong id="days">--</strong><span>Days</span></div>
-        <div><strong id="hours">--</strong><span>Hours</span></div>
-        <div><strong id="minutes">--</strong><span>Minutes</span></div>
-        <div><strong id="seconds">--</strong><span>Seconds</span></div>
-      </div>
-      <p class="small-note">Countdown currently uses noon as a placeholder. Update the time later in <code>index.html</code> if needed.</p>
+    <section class="countdown-section reveal">
+      <h2>Counting down to baby shower day</h2>
+      <div id="countdown" class="countdown"></div>
     </section>
 
-    <section class="section inspiration fade-in">
-      <p class="section-kicker">The theme</p>
-      <h2>Soft greens, wildflowers, gingham, picnic baskets, and locally grown baby shower energy.</h2>
+    <section class="gallery reveal">
+      <h2>A little inspiration</h2>
+      <p class="section-note">Soft garden details, sweet treats, and wildflower touches.</p>
+
       <div class="image-grid">
-        <img src="assets/theme-1.jpg" alt="Baby shower theme inspiration with soft garden colors">
-        <img src="assets/theme-2.jpg" alt="Garden baby shower table inspiration">
-        <img src="assets/theme-3.jpg" alt="Where the wild things grow baby shower theme inspiration">
-        <img src="assets/theme-4.jpg" alt="Locally grown baby shower inspiration">
-        <img src="assets/theme-5.jpg" alt="Wildflower baby shower decor inspiration">
+        <img src="vanilla-cupcakes.jpg" alt="Vanilla cupcakes with flowers">
+        <img src="strawberry-jam-jars.jpg" alt="Strawberry jam baby shower favors">
+        <img src="onesies-and-plants.jpg" alt="Baby onesies and garden plants">
+        <img src="bread-decorated.jpg" alt="Decorated bread for a garden baby shower">
       </div>
     </section>
 
-    <section class="section vibe fade-in">
-      <div>
-        <p class="section-kicker">The vibe</p>
-        <h2>Relaxed, sweet, outdoorsy, and not too formal.</h2>
-      </div>
-      <div class="vibe-list">
-        <span>Wildflowers</span>
-        <span>BBQ</span>
-        <span>Garden Party</span>
-        <span>Locally Grown</span>
-        <span>Baby in Bloom</span>
+    <section class="extras reveal">
+      <h2>Fun things to include in your RSVP</h2>
+
+      <div class="extras-grid">
+        <div>
+          <h3>Advice for the parents</h3>
+          <p>Share a sweet, funny, or helpful note.</p>
+        </div>
+
+        <div>
+          <h3>Baby name ideas</h3>
+          <p>Drop your best suggestions.</p>
+        </div>
+
+        <div>
+          <h3>Song request</h3>
+          <p>Add a song for the shower playlist.</p>
+        </div>
       </div>
     </section>
 
-    <section id="rsvp" class="section rsvp-section fade-in">
-      <div class="rsvp-copy">
-        <p class="section-kicker">RSVP</p>
-        <h2>Let us know if you can make it.</h2>
-        <p>Replace the form below with your Google Form embed. Once connected, responses will go straight into Google Sheets.</p>
-        <p class="small-note">In Google Forms, click <strong>Send</strong> → <strong>&lt;&gt;</strong> → copy the embed code → replace the placeholder iframe below.</p>
-      </div>
+    <section id="rsvp" class="rsvp reveal">
+      <h2>RSVP</h2>
+      <p>Please let us know if you can make it.</p>
 
-      <div class="form-wrap">
-        <iframe
-          title="Baby Shower RSVP Form"
-          src="https://docs.google.com/forms/d/e/PASTE-YOUR-GOOGLE-FORM-ID-HERE/viewform?embedded=true"
-          width="100%"
-          height="760"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0">
-          Loading…
-        </iframe>
+      <div class="form-box">
+        <p class="form-placeholder">
+          Google Form goes here. Replace this text with your Google Form embed code.
+        </p>
       </div>
     </section>
 
-    <section id="registry" class="section registry fade-in">
-      <p class="section-kicker">Registry</p>
-      <h2>A little something for baby.</h2>
-      <p>Add a registry link here, or use this space for notes like books instead of cards, diaper raffle info, or anything guests should know.</p>
-      <a class="button primary" href="#" target="_blank" rel="noopener">View Registry</a>
+    <section class="registry reveal">
+      <h2>Registry</h2>
+      <p>Registry details coming soon.</p>
+      <a href="#" class="button secondary">View Registry</a>
     </section>
   </main>
 
   <footer>
-    <p>Made with love for a little wild thing on the way.</p>
+    <p>Please do not share this link publicly.</p>
   </footer>
 
   <script src="script.js"></script>
