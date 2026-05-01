@@ -13,6 +13,8 @@ body {
   background: #f8f4ec;
 }
 
+/* HERO */
+
 .hero {
   min-height: 88vh;
   background-image: url("bread-decorated.jpg");
@@ -33,12 +35,15 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
+/* BIG TITLE ABOVE MAIN HEADER */
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 13px;
+  font-size: clamp(20px, 4vw, 34px);
+  font-weight: bold;
   color: #78845e;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
 h1 {
@@ -68,6 +73,8 @@ section p {
   line-height: 1.6;
 }
 
+/* BUTTONS */
+
 .button {
   display: inline-block;
   margin-top: 18px;
@@ -89,6 +96,8 @@ section p {
   background: #c98f69;
 }
 
+/* MAIN LAYOUT */
+
 main {
   max-width: 1080px;
   margin: 0 auto;
@@ -100,21 +109,23 @@ section {
   text-align: center;
 }
 
+/* DETAILS */
+
 .details {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
-.detail-card,
-.extras-grid div,
-.form-box {
+.detail-card {
   background: #fffaf1;
   border: 1px solid #e4d8c4;
   border-radius: 22px;
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
+
+/* COUNTDOWN */
 
 .countdown {
   display: flex;
@@ -143,6 +154,8 @@ section {
   color: #7a6d5b;
 }
 
+/* GALLERY */
+
 .section-note {
   color: #6f6250;
 }
@@ -162,6 +175,8 @@ section {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* EXTRAS */
+
 .extras-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -169,9 +184,23 @@ section {
   margin-top: 26px;
 }
 
+.extras-grid div {
+  background: #fffaf1;
+  border: 1px solid #e4d8c4;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* FORM */
+
 .form-box {
   margin-top: 24px;
   padding: 16px;
+  background: #fffaf1;
+  border: 1px solid #e4d8c4;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .form-box iframe {
@@ -181,16 +210,15 @@ section {
   border-radius: 16px;
 }
 
-.form-placeholder {
-  padding: 50px 20px;
-  color: #7a6d5b;
-}
+/* FOOTER */
 
 footer {
   text-align: center;
   padding: 36px 20px;
   color: #7a6d5b;
 }
+
+/* ANIMATIONS */
 
 .reveal {
   opacity: 0;
@@ -202,6 +230,8 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 850px) {
   .details,
