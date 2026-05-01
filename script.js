@@ -1,36 +1,14 @@
-// Fade-in sections as people scroll
-const fadeItems = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.15 });
-
-fadeItems.forEach((item) => observer.observe(item));
-
-// Countdown timer
-const countdown = document.querySelector('.countdown');
+const showerDate = new Date("August 22, 2026 12:00:00").getTime();
 
 function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = showerDate - now;
+  const countdown = document.getElementById("countdown");
+
   if (!countdown) return;
 
-  const eventDate = new Date(countdown.dataset.eventDate).getTime();
-  const now = new Date().getTime();
-  const distance = eventDate - now;
-
-  const daysEl = document.getElementById('days');
-  const hoursEl = document.getElementById('hours');
-  const minutesEl = document.getElementById('minutes');
-  const secondsEl = document.getElementById('seconds');
-
-  if (distance <= 0) {
-    daysEl.textContent = '0';
-    hoursEl.textContent = '0';
-    minutesEl.textContent = '0';
-    secondsEl.textContent = '0';
+  if (distance < 0) {
+    countdown.innerHTML = "<p>Baby shower day is here!</p>";
     return;
   }
 
@@ -39,23 +17,29 @@ function updateCountdown() {
   const minutes = Math.floor((distance / (1000 * 60)) % 60);
   const seconds = Math.floor((distance / 1000) % 60);
 
-  daysEl.textContent = days;
-  hoursEl.textContent = hours;
-  minutesEl.textContent = minutes;
-  secondsEl.textContent = seconds;
+  countdown.innerHTML = `
+    <div><strong>${days}</strong><span>Days</span></div>
+    <div><strong>${hours}</strong><span>Hours</span></div>
+    <div><strong>${minutes}</strong><span>Minutes</span></div>
+    <div><strong>${seconds}</strong><span>Seconds</span></div>
+  `;
 }
 
-updateCountdown();
 setInterval(updateCountdown, 1000);
+updateCountdown();
 
-// Tiny button sparkle effect on RSVP click
-const rsvpButtons = document.querySelectorAll('a[href="#rsvp"]');
+const revealItems = document.querySelectorAll(".reveal");
 
-rsvpButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    button.textContent = 'See you there ✿';
-    setTimeout(() => {
-      button.textContent = 'RSVP';
-    }, 1600);
+function revealOnScroll() {
+  revealItems.forEach((item) => {
+    const itemTop = item.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (itemTop < windowHeight - 80) {
+      item.classList.add("visible");
+    }
   });
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
